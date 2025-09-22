@@ -1,0 +1,13 @@
+Licencia de Uso Libre para CropOn! - Versión 1.0
+
+Copyright (c) 2024 [Tu Nombre o "CropOn!"]
+
+Se otorga permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software ("CropOn!") y sus archivos asociados (el "Software"), para usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender COPIAS DEL SOFTWARE RESULTANTE, y permitir a las personas a quienes se les proporcione el Software hacer lo mismo, sujeto a las siguientes condiciones:
+
+1.  **Prohibición de Venta del Código Fuente Original**: Está estrictamente prohibido vender, comercializar o lucrar directamente con el código fuente original de CropOn! (es decir, los archivos `.py`, `.svg`, `.ico`, etc., tal como se distribuyen en este repositorio) sin una autorización explícita y por escrito del autor original. El espíritu de esta cláusula es garantizar que CropOn! permanezca siempre gratuito y accesible para todos.
+
+2.  **Reconocimiento del Autor Original**: El aviso de copyright anterior, este aviso de permiso y la atribución "Powered by CropOn!" deben incluirse en todas las copias o partes sustanciales del Software.
+
+3.  **Sin Garantía**: El Software se proporciona "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, expresa o implícita, incluidas, entre otras, las garantías de COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR y NO INFRACCIÓN. En ningún caso los autores o titulares de los derechos de autor serán responsables de ninguna reclamación, daño u otra responsabilidad, ya sea en una acción de contrato, agravio u otro, derivada de, fuera de o en conexión con el Software o el uso u otros tratos en el Software.
+
+En resumen: Puedes usar CropOn! para lo que quieras, incluso en proyectos comerciales. Puedes modificarlo y redistribuirlo. Pero no puedes tomar el código de este repositorio y venderlo como un producto tuyo sin permiso.

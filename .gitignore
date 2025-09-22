@@ -1,0 +1,42 @@
+# --- Entornos Virtuales ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Archivos de Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.exe
+
+# --- Archivos de sistema y del IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.log
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+
+# --- Carpeta de salida del modelo (NO subir el checkpoint pesado) ---
+checkpoints/sam2.1_hiera_large.pt
+
+# --- Carpeta de máscaras generadas por el usuario ---
+masks/
+
+# --- Archivos de configuración local (si los tienes) ---
+.env
+*.env
+
+# --- Archivos de Gradio o caché ---
+gradio_cached_examples/
+tmp/
+temp/
+*.tmp
