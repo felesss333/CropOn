@@ -55,7 +55,7 @@ torchaudio==2.8.0+cpu
 ---
 
 ### 📥 Instalación
-
+```bash
 1. Clonar el repositorio CropOn
 git clone https://github.com/felesss333/CropOn.git
 
@@ -119,7 +119,7 @@ python cropon_full.py
 o
 
 python app.py
-
+```
 
 
 ---
