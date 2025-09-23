@@ -56,74 +56,135 @@ torchaudio==2.8.0+cpu
 
 ### 📥 Instalación
 
-🔹 Programas necesarios: Git & Python
+🔹 **Programas necesarios:**  
+✅ [Git](https://git-scm.com/)  
+✅ [Python 3.9 o superior](https://www.python.org/downloads/)
 
-```bash
-1. Clonar el repositorio CropOn
+
+<br>
+
+**1. Clonar el repositorio CropOn**
+```text
 git clone https://github.com/felesss333/CropOn.git
-
-2. Entrar en la carpeta del proyecto
-cd CropOn
-
-3. Crear entorno virtual
-python -m venv venv
-
-4. Activar entorno virtual
-source venv/Scripts/activate
-
-5. Descargar Modelo SAM2 en la ruta específica del proyecto:
-git clone https://github.com/facebookresearch/sam2.git segment-anything-2
-
-6. Entrar en la carpeta clonada
-cd segment-anything-2
-
-7. Instalar el paquete en modo editable
-pip install -e .
-
-8. Crear carpeta "conf" dentro de "sam2"
-mkdir sam2/conf
-
-9. Mover TODO el contenido de "configs" a "conf"
-mv sam2/configs/* sam2/conf/
-
-10. Copiar el archivo de configuración clave al nivel superior de 'conf'
-cp sam2/conf/sam2.1/sam2.1_hiera_l.yaml sam2/conf/
-
-11. Volver a la carpeta CropOn
-cd ..
-
-12. Instalar dependencias del proyecto
-pip install -r requirements.txt
-
-13. Crear carpeta para el modelo
-mkdir checkpoints
-
-15. Descargar modelo SAM2.1
-Descarga sam2.1_hiera_large.pt desde:
-🔗 https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints
-Guarda el archivo dentro de la carpeta ./checkpoints/ que acabas de crear.
-
-16. Crear carpeta para las máscaras
-mkdir masks
-
-17. Verificar que los archivos del modelo están en las rutas correctas.
-(SAM2 no funciona con rutas relativas, por ello la app funciona con rutas específicas)
-
-Archivo "sam2.1_hiera_large.pt" debe estar en:
-CropOn/checkpoints
-
-Archivo "sam2.1_hiera_l.yaml" debe estar en:
-CropOn/segment-anything-2/sam2/conf
-
-
-18. ¡Ejecutar la aplicación!
-python cropon_full.py
-
-o
-
-python app.py
 ```
 
+<br>
+
+**2. Entrar en la carpeta del proyecto**
+```text
+cd CropOn
+```
+
+<br>
+
+**3. Crear entorno virtual**
+```text
+python -m venv venv
+```
+<br>
+
+**4. Activar entorno virtual**
+```text
+source venv/Scripts/activate
+```
+
+<br>
+
+**5. Descargar Modelo SAM2 en la ruta específica del proyecto**
+```text
+git clone https://github.com/facebookresearch/sam2.git segment-anything-2
+```
+
+<br>
+
+**6. Entrar en la carpeta clonada**
+```text
+cd segment-anything-2
+```
+
+<br>
+
+**7. Instalar el paquete en modo editable**
+```text
+pip install -e .
+```
+
+<br>
+
+**8. Crear carpeta "conf" dentro de "sam2"**
+```text
+mkdir sam2/conf
+```
+
+<br>
+
+**9. Mover TODO el contenido de "configs" a "conf"**
+```text
+mv sam2/configs/* sam2/conf/
+```
+
+<br>
+
+**10. Copiar el archivo de configuración clave al nivel superior de 'conf'**
+```text
+cp sam2/conf/sam2.1/sam2.1_hiera_l.yaml sam2/conf/
+```
+
+<br>
+
+**11. Volver a la carpeta CropOn**
+```text
+cd ..
+```
+
+<br>
+
+**12. Instalar dependencias del proyecto**
+```text
+pip install -r requirements.txt
+```
+<br>
+
+**13. Crear carpeta para el modelo**
+```text
+mkdir checkpoints
+```
+<br>
+
+**14. Descargar modelo SAM2.1**
+Descarga sam2.1_hiera_large.pt desde:
+
+🔗 [https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints)
+```text
+Guarda el archivo dentro de la carpeta ./checkpoints/ que acabas de crear.
+```
+<br>
+
+**15. Crear carpeta para las máscaras**
+```text
+mkdir masks
+```
+<br>
+
+**16. Verificar que los archivos del modelo están en las rutas correctas.**
+*(SAM2 no funciona con rutas relativas, por ello la app funciona con rutas específicas)*
+
+**17. Archivo "sam2.1_hiera_large.pt" debe estar en:**
+```text
+CropOn/checkpoints
+```
+<br>
+
+**18. Archivo "sam2.1_hiera_l.yaml" debe estar en:**
+```text
+CropOn/segment-anything-2/sam2/conf
+```
+<br>
+
+**19. ¡Ejecutar la aplicación!**
+```text
+python cropon_full.py
+```
 
 ---
 
