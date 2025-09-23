@@ -512,7 +512,7 @@ def save_current_object(object_name, format_choice, smooth_toggle, clean_toggle,
                 final_mask_for_saving * 255,
                 final_mask_for_saving * 255
             )).astype(np.uint8)
-            mask_pil = Image.fromarray(mask_rgba, mode='RGBA')
+            mask_pil = Image.fromarray(mask_rgba)
             mask_pil.save(mask_path, format='PNG', compress_level=6)
             message = f"✅ Máscara sólida guardada: {os.path.basename(mask_path)}"
         # --- OPCIÓN 2: IMAGEN RECORTADA (PNG con fondo transparente) ---
@@ -524,7 +524,7 @@ def save_current_object(object_name, format_choice, smooth_toggle, clean_toggle,
             alpha_channel = final_mask_for_saving.astype(np.uint8) * 255
             original_np[:, :, 3] = alpha_channel
             cutout_path = os.path.join(MASKS_DIR, f"{final_name}_cutout.png")
-            cutout_pil = Image.fromarray(original_np, mode='RGBA')
+            cutout_pil = Image.fromarray(original_np)
             cutout_pil.save(cutout_path, format='PNG', compress_level=6)
             message = f"✅ Imagen recortada guardada: {os.path.basename(cutout_path)}"
         # --- OPCIÓN 3: CONTORNOS (JSON) ---

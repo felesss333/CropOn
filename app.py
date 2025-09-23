@@ -20,23 +20,12 @@ import json
 # --- Cargar modelo SAM 2 ---
 from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
-import urllib.request
-import os
-
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print("Cargando modelo SAM 2.1...")
 
-# --- Descargar el modelo automáticamente si no existe ---
-CHECKPOINT_URL = "https://dl.fbaipublicfiles.com/segment_anything_2/072824/sam2.1_hiera_large.pt"
+# --- Rutas relativas al proyecto ---
 CHECKPOINT_PATH = os.path.join("checkpoints", "sam2.1_hiera_large.pt")
 CONFIG_PATH = os.path.join("segment-anything-2", "sam2", "conf", "sam2.1_hiera_l.yaml")
-
-os.makedirs("checkpoints", exist_ok=True)
-
-if not os.path.exists(CHECKPOINT_PATH):
-    print("Descargando modelo SAM 2.1...")
-    urllib.request.urlretrieve(CHECKPOINT_URL, CHECKPOINT_PATH)
-    print("✅ Modelo descargado.")
 
 # Verificar existencia de archivos
 if not os.path.exists(CHECKPOINT_PATH):
@@ -44,8 +33,8 @@ if not os.path.exists(CHECKPOINT_PATH):
 if not os.path.exists(CONFIG_PATH):
     raise FileNotFoundError(f"No se encontró el archivo de configuración: {CONFIG_PATH}")
 
-# Cargar el modelo
-sam2_model = build_sam2(CONFIG_PATH, CHECKPOINT_PATH, device=DEVICE)
+# --- Cargar el modelo con rutas absolutas ---
+sam2_model = build_sam2(os.path.abspath(CONFIG_PATH), os.path.abspath(CHECKPOINT_PATH), device=DEVICE)
 predictor = SAM2ImagePredictor(sam2_model)
 print("✅ ¡Modelo SAM 2.1 cargado correctamente!")
 
@@ -523,7 +512,7 @@ def save_current_object(object_name, format_choice, smooth_toggle, clean_toggle,
                 final_mask_for_saving * 255,
                 final_mask_for_saving * 255
             )).astype(np.uint8)
-            mask_pil = Image.fromarray(mask_rgba, mode='RGBA')
+            mask_pil = Image.fromarray(mask_rgba)
             mask_pil.save(mask_path, format='PNG', compress_level=6)
             message = f"✅ Máscara sólida guardada: {os.path.basename(mask_path)}"
         # --- OPCIÓN 2: IMAGEN RECORTADA (PNG con fondo transparente) ---
